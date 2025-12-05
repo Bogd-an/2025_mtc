@@ -4,6 +4,7 @@ run('lw1_params.m');
 syms p
 pE  = p * eye(4); % квадратна матриця 4 з діагоналлю p 
 W_U = (pE - A)\B; % за керуючим впливом
+% W_U = inv(pE - A)*B;
 W_L = (pE - A)\G; % за збуренням
 
 charPoly = simplify(det(pE - A)); % символьний характеристичний многочлен
